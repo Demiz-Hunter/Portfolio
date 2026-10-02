@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ross Vieira</title>
+<meta name="description" content="Ross Vieira, analytics and AI engineer in São Paulo. Predictive models and production AI at Latin America's largest payment acquirer; founder of XRAV and HUNTER. Open to remote roles with teams in the US, Canada and Europe.">
+<meta name="author" content="Rosilson Vieira Junior">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Ross Vieira, analytics and AI engineer">
+<meta property="og:description" content="Data and AI systems that pay for themselves. Five years in payments operations, two AI products of my own, available for remote roles.">
+<meta property="og:url" content="https://demiz-hunter.github.io/portfolio/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230F3D2E'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='34' fill='%23F3F4F0'%3ERV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rosilson Vieira Junior",
+  "alternateName": "Ross Vieira",
+  "jobTitle": "Analytics and AI Engineer",
+  "worksFor": { "@type": "Organization", "name": "Cielo" },
+  "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressCountry": "BR" },
+  "email": "mailto:rosilson@outlook.com",
+  "url": "https://demiz-hunter.github.io/portfolio/",
+  "sameAs": ["https://www.linkedin.com/in/rosilson", "https://github.com/Demiz-Hunter"],
+  "knowsAbout": ["Analytics engineering", "Python", "SQL", "Power BI", "BigQuery", "dbt", "Airflow", "LLM agents", "Computer vision", "Process automation", "Payments"]
+}
+</script>
+<style>
+/* Layout: a signed statement. One left-aligned column on a wide measure, thick rules between
+   sections, no cards, no shadows, no motion. The single bold moment is the deep-green ledger
+   where results are set as oversized tabular figures. Type is one family, Archivo, used at two
+   widths: expanded for display lines, normal for everything else. */
+:root {
+  --paper: #F3F4F0;      /* cool off-white, slight green bias */
+  --paper-2: #E7EAE4;    /* secondary surface: spec rows, buttons at rest */
+  --ink: #000000;        /* text */
+  --muted: #5B615B;      /* secondary text, labels */
+  --rule: #C7CCC5;       /* hairlines inside blocks */
+  --ledger: #0F3D2E;     /* deep bank green: the one color plane */
+  --ledger-ink: #F3F4F0; /* text on the plane */
+  --ledger-soft: #9FD3B5;/* secondary text on the plane */
+  --signal: #1AA35B;     /* keypad "enter" green: status dot, focus ring, hover underline */
+
+  --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --measure: 66ch;
+  --gutter: clamp(16px, 5vw, 72px);
+  --wide: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #101311; --paper-2: #181C19; --ink: #ECEEE8; --muted: #9EA79E; --rule: #2C332D;
+    --ledger: #0F3D2E; --ledger-ink: #F3F4F0; --ledger-soft: #9FD3B5; --signal: #35C47A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #101311; --paper-2: #181C19; --ink: #ECEEE8; --muted: #9EA79E; --rule: #2C332D;
+  --ledger: #0F3D2E; --ledger-ink: #F3F4F0; --ledger-soft: #9FD3B5; --signal: #35C47A;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.0625rem;           /* 17px */
+  line-height: 1.55;
+  font-stretch: 100%;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-color: var(--signal); text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; }
+p { margin: 0; max-width: var(--measure); }
+p + p { margin-top: 1em; }
+strong { font-weight: 600; }
+h1, h2, h3 { margin: 0; font-weight: 700; line-height: 1.1; text-wrap: balance; }
+
+.wrap { max-width: var(--wide); margin-inline: auto; padding-inline: var(--gutter); }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--paper); padding: 8px 12px; }
+.skip:focus { left: 8px; z-index: 10; }
+
+/* Top bar */
+.top { border-bottom: 3px solid var(--ink); }
+.top .wrap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px 28px; padding-block: 22px 18px; }
+.wordmark { font-stretch: 125%; font-weight: 800; font-size: 1.125rem; letter-spacing: 0.01em; text-decoration: none; }
+.top nav { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 0.9375rem; }
+.top nav a { text-decoration: none; }
+.top nav a:hover { text-decoration: underline; text-decoration-color: var(--signal); text-decoration-thickness: 2px; }
+
+/* Hero */
+.hero { padding-block: clamp(44px, 7vw, 96px) clamp(40px, 6vw, 80px); }
+.hero h1 {
+  font-stretch: 125%;
+  font-weight: 800;
+  font-size: clamp(2.25rem, 6.6vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  max-width: 14ch;
+}
+.lede { font-size: clamp(1.125rem, 1.4vw + 0.7rem, 1.375rem); line-height: 1.45; max-width: 36em; margin-top: clamp(22px, 3vw, 36px); }
+
+.statement { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; margin-top: clamp(36px, 5vw, 64px); align-items: start; }
+@media (min-width: 820px) { .statement { grid-template-columns: minmax(0, 1fr) 280px; } .statement:has(figure[hidden]) { grid-template-columns: minmax(0, 1fr); } }
+.spec { margin: 0; border-top: 1px solid var(--ink); max-width: 760px; }
+.spec > div { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 8px 20px; padding-block: 11px; border-bottom: 1px solid var(--rule); }
+.spec dt { color: var(--muted); font-weight: 500; }
+.spec dd { margin: 0; }
+@media (max-width: 480px) { .spec > div { grid-template-columns: 1fr; gap: 2px; } }
+.dot { display: inline-block; width: 0.6em; height: 0.6em; border-radius: 50%; background: var(--signal); margin-right: 0.45em; vertical-align: 0.02em; }
+.portrait { margin: 0; }
+.portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.portrait figcaption { color: var(--muted); font-size: 0.9375rem; margin-top: 10px; }
+
+/* Sections */
+.section { border-top: 3px solid var(--ink); padding-block: clamp(36px, 5vw, 64px) clamp(44px, 6vw, 88px); }
+.section > .wrap { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px 48px; }
+@media (min-width: 900px) { .section > .wrap { grid-template-columns: 240px minmax(0, 1fr); } }
+.section h2 { font-stretch: 112%; font-weight: 700; font-size: 1.75rem; letter-spacing: -0.01em; }
+.section h2 small { display: block; font-stretch: 100%; font-weight: 400; font-size: 0.9375rem; color: var(--muted); margin-top: 10px; line-height: 1.4; max-width: 24ch; }
+.body { min-width: 0; }
+
+/* Case studies */
+.case { padding-block: 8px 44px; }
+.case + .case { border-top: 1px solid var(--ink); padding-top: 40px; }
+.case h3 { font-stretch: 112%; font-size: clamp(1.375rem, 2vw + 0.6rem, 1.75rem); max-width: 22ch; }
+.case .spec { margin-top: 22px; border-top-color: var(--rule); font-size: 0.9375rem; }
+.case .spec > div { padding-block: 8px; }
+.case .text { margin-top: 26px; }
+.case .text p { max-width: var(--measure); }
+.case .text b { font-weight: 700; }
+.also { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--ink); display: grid; gap: 14px; }
+.also p { max-width: var(--measure); }
+
+/* Ledger: the one bold moment */
+.ledger { background: var(--ledger); color: var(--ledger-ink); border-top: 0; }
+.ledger h2 { color: var(--ledger-ink); }
+.ledger h2 small { color: var(--ledger-soft); }
+.rows { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ledger-soft); }
+.rows li { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px 32px; padding-block: 22px; border-bottom: 1px solid color-mix(in srgb, var(--ledger-soft) 45%, transparent); align-items: baseline; }
+@media (min-width: 640px) { .rows li { grid-template-columns: 15.5rem minmax(0, 1fr) auto; } }
+.fig { font-stretch: 125%; font-weight: 800; font-size: clamp(2.25rem, 4.6vw, 3.75rem); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.fig small { font-size: 0.5em; font-weight: 700; vertical-align: 0.35em; margin-left: 0.1em; }
+.rows .what { max-width: 34em; }
+.rows .src { color: var(--ledger-soft); font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
+@media (min-width: 640px) { .rows .src { text-align: right; } }
+
+/* Stack */
+.stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px 32px; }
+.stack h3 { font-size: 1.0625rem; font-weight: 700; padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
+.stack ul { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+
+/* Timeline */
+.timeline { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+.timeline li { display: grid; grid-template-columns: 7.5em minmax(0, 1fr); gap: 4px 20px; padding-block: 14px; border-bottom: 1px solid var(--rule); }
+@media (max-width: 480px) { .timeline li { grid-template-columns: 1fr; } }
+.timeline .when { font-stretch: 112%; font-weight: 700; font-variant-numeric: tabular-nums; }
+.timeline .what strong { display: block; }
+.edu { margin: 36px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; max-width: var(--measure); }
+.edu li { padding-left: 1.1em; text-indent: -1.1em; }
+.edu li::before { content: "—"; display: inline-block; width: 1.1em; text-indent: 0; }
+
+/* Contact */
+.contact h2 { font-stretch: 125%; font-size: clamp(2rem, 5vw, 3.25rem); letter-spacing: -0.015em; }
+.channels { margin: 28px 0 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+.channels li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; }
+.channels .k { color: var(--muted); min-width: 5.5em; }
+.channels .v { font-size: 1.25rem; font-weight: 500; word-break: break-word; }
+.copy { font: inherit; font-size: 0.875rem; font-weight: 500; color: var(--ink); background: var(--paper-2); border: 1px solid var(--rule); padding: 4px 10px; cursor: pointer; }
+.copy:hover { border-color: var(--ink); }
+.cta { display: inline-block; margin-top: 32px; background: var(--ink); color: var(--paper); text-decoration: none; padding: 14px 22px; font-weight: 600; }
+.cta:hover { background: var(--ledger); color: var(--ledger-ink); }
+
+footer { border-top: 3px solid var(--ink); color: var(--muted); font-size: 0.9375rem; }
+footer .wrap { padding-block: 22px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+
+@media print {
+  body { font-size: 11pt; color: #000; background: #fff; }
+  .top nav, .cta, .copy, .skip { display: none; }
+  .ledger { background: #fff; color: #000; border-top: 3px solid #000; }
+  .ledger h2, .rows .src { color: #000; }
+  .section, .case { break-inside: avoid; }
+  a { text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="wordmark" href="#top" id="top">Ross Vieira</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#results">Results</a>
+      <a href="#stack">Stack</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap hero">
+    <h1>Data and AI systems that pay for themselves.</h1>
+    <p class="lede">I'm an analytics and AI engineer in São Paulo. Five years of predictive models, automation and production AI inside Latin America's largest payment acquirer, and two AI products of my own, built end to end.</p>
+
+    <div class="statement">
+      <dl class="spec">
+        <div><dt>Name</dt><dd>Rosilson Vieira Junior, known as Ross</dd></div>
+        <div><dt>Based in</dt><dd>São Paulo, Brazil. UTC−3, which covers the full US East Coast workday and most of Europe's afternoon.</dd></div>
+        <div><dt>Working</dt><dd>Remote, 40 hours a week, full-time or contract</dd></div>
+        <div><dt>Looking for</dt><dd>Analytics engineer, AI engineer or senior data analyst roles with teams in the US, Canada or Europe</dd></div>
+        <div><dt>Languages</dt><dd>Portuguese and English</dd></div>
+        <div><dt>Status</dt><dd><span class="dot" aria-hidden="true"></span>Interviewing now</dd></div>
+      </dl>
+      <figure class="portrait">
+        <img src="ross.jpg" alt="Ross Vieira" width="560" height="700" loading="lazy" onerror="this.closest('figure').hidden=true">
+        <figcaption>São Paulo, 2026</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <h2>What I do</h2>
+      <div class="body">
+        <p>Since 2020 I've worked inside the terminal-logistics operation of Cielo, Latin America's largest payment acquirer. I started by mapping processes and ended up building the predictive models, AI classifiers and automations that run inside the operation. That work is credited with seven-figure annual savings in US dollars, measured and documented.</p>
+        <p>Outside Cielo I build AI products end to end: XRAV, a lead-qualification platform in production for insurance and real estate, and HUNTER, a shopping assistant that runs inside WhatsApp. Before data, I spent eight years in insurance brokerage, which is why my work tends to start from the P&amp;L rather than from the model.</p>
+        <p>I like problems where the model is the easy part and the hard part is making it reliable inside a real operation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="wrap">
+      <h2>Selected work <small>Three systems in production or pilot. Each one is mine from the first data pull to the last deploy.</small></h2>
+      <div class="body">
+
+        <article class="case">
+          <h3>Predictive models and AI automation for a POS terminal operation</h3>
+          <dl class="spec">
+            <div><dt>Where</dt><dd>Cielo, Latin America's largest payment acquirer</dd></div>
+            <div><dt>When</dt><dd>2020 to today</dd></div>
+            <div><dt>Role</dt><dd>AI Process Analyst, logistics and terminal management</dd></div>
+            <div><dt>Stack</dt><dd>Python, SQL on Databricks, Power BI, computer vision, LLM classifiers</dd></div>
+          </dl>
+          <div class="text">
+            <!-- TODO Ross: add one concrete detail per model if you can disclose it (what is predicted, what is classified, what the vision check looks at, fleet scale). -->
+            <p><b>The problem.</b> An acquirer's terminal operation moves equipment through installation, replacement, repair and return every day. Most decisions in that flow were made from static reports and experience, late and by hand.</p>
+            <p><b>What I built.</b> Predictive algorithms that anticipate the operation's demand before it arrives, AI classification that sorts cases and documents automatically, a computer-vision check inside the process, and the automations and Power BI semantic models that put all of it in front of the teams who act on it. I also ran an AI ideation program with three operational teams, turning 150 raw ideas into 51 initiatives.</p>
+            <p><b>What it returned.</b> Documented impact in the seven figures a year, in US dollars, validated internally. The exact figure is in my CV.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <h3>An AI lead engine for an insurance and real-estate brokerage</h3>
+          <dl class="spec">
+            <div><dt>Where</dt><dd>XRAV, my own brokerage group</dd></div>
+            <div><dt>When</dt><dd>2025 to today, in production</dd></div>
+            <div><dt>Role</dt><dd>Founder and engineer</dd></div>
+            <div><dt>Stack</dt><dd>n8n, Claude-based classifiers, ElevenLabs voice, WhatsApp Business API, Next.js and an in-house CRM, self-hosted on Docker</dd></div>
+          </dl>
+          <div class="text">
+            <p><b>The problem.</b> A brokerage runs on leads, and most of the time between first contact and a quote goes to the same questions, asked on WhatsApp at all hours. I own the brokerage, so I had the data and the pain.</p>
+            <p><b>What I built.</b> Claudia, a WhatsApp agent that answers, qualifies and routes leads; the n8n orchestration behind her; LLM classifiers for intent and lead quality; voice replies through ElevenLabs; and the CRM she writes to. The stack is self-hosted so the business keeps its data and its margins.</p>
+            <p><b>What it returned.</b> About 1,000 qualified leads in the first month in production.</p>
+          </div>
+        </article>
+
+        <article class="case">
+          <h3>A shopping assistant that lives inside WhatsApp</h3>
+          <dl class="spec">
+            <div><dt>Where</dt><dd>HUNTER, my own product</dd></div>
+            <div><dt>When</dt><dd>2025 to today, in pilot</dd></div>
+            <div><dt>Role</dt><dd>Founder and engineer</dd></div>
+            <div><dt>Stack</dt><dd>Node.js, Claude API, Supabase, Railway, Z-API</dd></div>
+          </dl>
+          <div class="text">
+            <p><b>The problem.</b> In Brazil, people research purchases in chat, not in apps. An assistant has to work inside a WhatsApp conversation, with all the ambiguity that brings.</p>
+            <p><b>What I built.</b> A multi-agent pipeline that reads a request, detects what the person actually wants, searches and compares options, and answers in the same conversation. Supabase holds state, Railway runs it.</p>
+            <p><b>What it returned.</b> Currently in pilot.</p>
+          </div>
+        </article>
+
+        <div class="also">
+          <p>Also: Protocolo70, an AI fitness app that writes personalized transformation protocols, in pilot.</p>
+          <p>Now building: a public finance analytics platform on Python, BigQuery, dbt, Airflow and Power BI, as an end-to-end analytics engineering case. Code on <a href="https://github.com/Demiz-Hunter">GitHub</a>.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section ledger" id="results">
+    <div class="wrap">
+      <h2>Results on record <small>Figures I can stand behind in an interview.</small></h2>
+      <div class="body">
+        <ul class="rows">
+          <li><span class="fig">7<small>figures</small></span><span class="what">of documented annual impact in US dollars from models and automation at Cielo</span><span class="src">Cielo, 2021 to 2026</span></li>
+          <li><span class="fig">1,000<small>+</small></span><span class="what">qualified leads in the first month of XRAV in production</span><span class="src">XRAV, 2025</span></li>
+          <li><span class="fig">3</span><span class="what">AI products built end to end</span><span class="src">XRAV, HUNTER, Protocolo70</span></li>
+          <li><span class="fig">13<small>years</small></span><span class="what">of operations work: eight in insurance, five in payments data and AI</span><span class="src">2012 to 2026</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="stack">
+    <div class="wrap">
+      <h2>Stack</h2>
+      <div class="body stack">
+        <div>
+          <h3>Data and analytics</h3>
+          <ul>
+            <li>Python</li>
+            <li>SQL (Databricks, BigQuery)</li>
+            <li>Power BI, semantic models and DAX</li>
+            <li>dbt and Airflow</li>
+            <li>Excel modeling with openpyxl</li>
+            <li>Lean Six Sigma, PDCA</li>
+          </ul>
+        </div>
+        <div>
+          <h3>AI and agents</h3>
+          <ul>
+            <li>Claude API, LLM classification</li>
+            <li>Multi-agent pipelines</li>
+            <li>Computer vision</li>
+            <li>n8n orchestration</li>
+            <li>ElevenLabs voice</li>
+            <li>WhatsApp Business API</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Delivery</h3>
+          <ul>
+            <li>Node.js, Next.js</li>
+            <li>Supabase, Railway</li>
+            <li>Docker on a VPS</li>
+            <li>Git and GitHub</li>
+            <li>Executive reporting with python-pptx</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="background">
+    <div class="wrap">
+      <h2>Background</h2>
+      <div class="body">
+        <ol class="timeline">
+          <!-- TODO Ross: confirm the insurance years. -->
+          <li><span class="when">2012 to 2020</span><span class="what"><strong>Insurance brokerage, administration and sales</strong>Eight years on the business side: pipeline, pricing, clients, renewals.</span></li>
+          <li><span class="when">2020</span><span class="what"><strong>B.Eng., Mechanical Engineering, FACENS</strong>Sorocaba, Brazil. Joined Cielo the same year.</span></li>
+          <li><span class="when">2020 to today</span><span class="what"><strong>Cielo, logistics and terminal management</strong>From process analysis to AI Process Analyst. Predictive models, AI classification, computer vision, automation.</span></li>
+          <li><span class="when">2025</span><span class="what"><strong>Founded XRAV's AI platform; started HUNTER</strong>Both built end to end, outside working hours, on my own infrastructure.</span></li>
+          <li><span class="when">2026</span><span class="what"><strong>Data Engineering for AI, Asimov Academy</strong>Building a public finance analytics platform on BigQuery, dbt and Airflow.</span></li>
+        </ol>
+        <ul class="edu">
+          <li>Postgraduate specialization in Business Intelligence, Anhembi Morumbi University</li>
+          <li>Postgraduate specialization in Big Data, Anhembi Morumbi University</li>
+          <li>Lean Six Sigma Yellow Belt</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <h2>Let's talk.</h2>
+      <div class="body">
+        <p>If you're hiring for an analytics or AI engineering role on a remote team, send me a note with the role and the time zone. I reply within a day.</p>
+        <ul class="channels">
+          <li><span class="k">Email</span><a class="v" href="mailto:rosilson@outlook.com">rosilson@outlook.com</a><button class="copy" type="button" data-copy="rosilson@outlook.com">Copy</button></li>
+          <li><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/rosilson">linkedin.com/in/rosilson</a></li>
+          <li><span class="k">GitHub</span><a class="v" href="https://github.com/Demiz-Hunter">github.com/Demiz-Hunter</a></li>
+        </ul>
+        <!-- Drop a cv.pdf next to this file and uncomment the line below. -->
+        <!-- <a class="cta" href="cv.pdf">Download my CV (PDF)</a> -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Rosilson Vieira Junior. São Paulo, Brazil.</span>
+    <span>Last updated October 2026.</span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = btn.getAttribute('data-copy');
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function () { fallback(); });
+    } else { fallback(); }
+    function fallback() {
+      var link = btn.previousElementSibling, range = document.createRange(), sel = window.getSelection();
+      range.selectNodeContents(link); sel.removeAllRanges(); sel.addRange(range);
+      btn.textContent = 'Selected';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 1800);
+    }
+  });
+});
+</script>
+</body>
+</html>
