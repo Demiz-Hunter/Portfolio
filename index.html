@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ross Vieira</title>
-<meta name="description" content="Ross Vieira, analytics and AI engineer in São Paulo. Predictive models and production AI at Latin America's largest payment acquirer; founder of XRAV and HUNTER. Open to remote roles with teams in the US, Canada and Europe.">
+<meta name="description" content="Ross Vieira, analytics and AI engineer in São Paulo. LLM agents, predictive models and production AI at Latin America's largest payment acquirer; founder of XRAV and HUNTER. Open to remote roles with teams in the US, Canada and Europe.">
 <meta name="author" content="Rosilson Vieira Junior">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Ross Vieira, analytics and AI engineer">
@@ -215,7 +215,7 @@ footer .wrap { padding-block: 22px 40px; display: flex; flex-wrap: wrap; justify
 <main id="main">
   <section class="wrap hero">
     <h1>Data and AI systems that pay for themselves.</h1>
-    <p class="lede">I'm an analytics and AI engineer in São Paulo. Five years of predictive models, automation and production AI inside Latin America's largest payment acquirer, and two AI products of my own, built end to end.</p>
+    <p class="lede">I'm an analytics and AI engineer in São Paulo. Five years of predictive models, automation and production AI inside Latin America's largest payment acquirer, where my latest work is an LLM agent the whole company uses to manage its terminal fleet. Two AI products of my own, built end to end.</p>
 
     <div class="statement">
       <dl class="spec">
@@ -237,7 +237,7 @@ footer .wrap { padding-block: 22px 40px; display: flex; flex-wrap: wrap; justify
     <div class="wrap">
       <h2>What I do</h2>
       <div class="body">
-        <p>Since 2020 I've worked inside the terminal-logistics operation of Cielo, Latin America's largest payment acquirer. I started by mapping processes and ended up building the predictive models, AI classifiers and automations that run inside the operation. That work is credited with seven-figure annual savings in US dollars, measured and documented.</p>
+        <p>Since 2020 I've worked inside the terminal-logistics operation of Cielo, Latin America's largest payment acquirer. I started by mapping processes and ended up building the predictive models, AI classifiers and automations that run inside the operation. That work is credited with seven-figure annual savings in US dollars, measured and documented. The latest piece is GAIA, an agent over the operation's Databricks data that anyone at Cielo can ask, in Teams, about the state of the terminal fleet.</p>
         <p>Outside Cielo I build AI products end to end: XRAV, a lead-qualification platform in production for insurance and real estate, and HUNTER, a shopping assistant that runs inside WhatsApp. Before data, I spent eight years in insurance brokerage, which is why my work tends to start from the P&amp;L rather than from the model.</p>
         <p>I like problems where the model is the easy part and the hard part is making it reliable inside a real operation.</p>
       </div>
@@ -246,8 +246,24 @@ footer .wrap { padding-block: 22px 40px; display: flex; flex-wrap: wrap; justify
 
   <section class="section" id="work">
     <div class="wrap">
-      <h2>Selected work <small>Three systems in production or pilot. Each one is mine from the first data pull to the last deploy.</small></h2>
+      <h2>Selected work <small>Four systems in production or pilot. Each one is mine from the first data pull to the last deploy.</small></h2>
       <div class="body">
+
+        <article class="case">
+          <h3>GAIA, an AI agent for managing a fleet of payment terminals</h3>
+          <dl class="spec">
+            <div><dt>Where</dt><dd>Cielo, Latin America's largest payment acquirer</dd></div>
+            <div><dt>When</dt><dd>2026, live in Microsoft Teams</dd></div>
+            <div><dt>Role</dt><dd>Designed and built it, from the data layer to the agent</dd></div>
+            <div><dt>Stack</dt><dd>Databricks and Databricks Genie, GPT-5.6, Claude Opus 4.8, Microsoft Teams</dd></div>
+          </dl>
+          <div class="text">
+            <!-- TODO Ross: a usage figure (people with access, questions per week) would make this case much stronger. -->
+            <p><b>The problem.</b> A fleet of POS terminals changes state every day: installed, moved, recovered, lost, in stock. Knowing where the fleet stood meant knowing which report to open and whom to ask, so most people did neither.</p>
+            <p><b>What I built.</b> GAIA, an agent that lives in Microsoft Teams and answers questions about the fleet in plain language, grounded in the operation's data integrated in Databricks. It covers machine status, the rules that define the active and inactive park, losses and the gap in the park, key accounts, asset recovery, movements, position and inventory. GPT-5.6 and Claude Opus 4.8 do the reasoning; Databricks Genie turns the questions into queries.</p>
+            <p><b>What it returned.</b> One place to ask about the fleet, open company-wide to every employee with access, instead of a chain of reports and messages.</p>
+          </div>
+        </article>
 
         <article class="case">
           <h3>Predictive models and AI automation for a POS terminal operation</h3>
@@ -311,7 +327,7 @@ footer .wrap { padding-block: 22px 40px; display: flex; flex-wrap: wrap; justify
         <ul class="rows">
           <li><span class="fig">7<small>figures</small></span><span class="what">of documented annual impact in US dollars from models and automation at Cielo</span><span class="src">Cielo, 2021 to 2026</span></li>
           <li><span class="fig">1,000<small>+</small></span><span class="what">qualified leads in the first month of XRAV in production</span><span class="src">XRAV, 2025</span></li>
-          <li><span class="fig">3</span><span class="what">AI products built end to end</span><span class="src">XRAV, HUNTER, Protocolo70</span></li>
+          <li><span class="fig">4</span><span class="what">AI products built end to end</span><span class="src">GAIA, XRAV, HUNTER, Protocolo70</span></li>
           <li><span class="fig">13<small>years</small></span><span class="what">of operations work: eight in insurance, five in payments data and AI</span><span class="src">2012 to 2026</span></li>
         </ul>
       </div>
@@ -336,7 +352,8 @@ footer .wrap { padding-block: 22px 40px; display: flex; flex-wrap: wrap; justify
         <div>
           <h3>AI and agents</h3>
           <ul>
-            <li>Claude API, LLM classification</li>
+            <li>Claude and GPT models, LLM classification</li>
+            <li>Databricks Genie</li>
             <li>Multi-agent pipelines</li>
             <li>Computer vision</li>
             <li>n8n orchestration</li>
@@ -368,7 +385,7 @@ footer .wrap { padding-block: 22px 40px; display: flex; flex-wrap: wrap; justify
           <li><span class="when">2020</span><span class="what"><strong>B.Eng., Mechanical Engineering, FACENS</strong>Sorocaba, Brazil. Joined Cielo the same year.</span></li>
           <li><span class="when">2020 to today</span><span class="what"><strong>Cielo, logistics and terminal management</strong>From process analysis to AI Process Analyst. Predictive models, AI classification, computer vision, automation.</span></li>
           <li><span class="when">2025</span><span class="what"><strong>Founded XRAV's AI platform; started HUNTER</strong>Both built end to end, outside working hours, on my own infrastructure.</span></li>
-          <li><span class="when">2026</span><span class="what"><strong>Data Engineering for AI, Asimov Academy</strong>Building a public finance analytics platform on BigQuery, dbt and Airflow.</span></li>
+          <li><span class="when">2026</span><span class="what"><strong>Shipped GAIA at Cielo; Data Engineering for AI, Asimov Academy</strong>An LLM agent over Databricks for the whole company, and a public finance analytics platform on BigQuery, dbt and Airflow in progress.</span></li>
         </ol>
         <ul class="edu">
           <li>Postgraduate specialization in Business Intelligence, Anhembi Morumbi University</li>
